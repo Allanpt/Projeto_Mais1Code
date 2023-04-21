@@ -1,8 +1,24 @@
-
 @font-face {
     font-family: 'Open Sans';
-    src: url('fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
+    src: url('fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
 }
+
+
+* {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #E5E5E5;
+    
+}
+
+
 
 *{
  
@@ -24,10 +40,9 @@ body {
   
 
 .lista{
+
     display: flex;
-    flex-wrap:wrap;
-    flex-direction:center;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
     gap: 180px;
@@ -39,10 +54,25 @@ body {
     
 }
 
-.lista a{
+
+.lista-container {
+    display: flex;
+}
+
+.lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    gap: 30px;
+}
+
+.lista a {
     color: #1466cf;
-    list-style: none;
     text-transform: uppercase;
+\
+=======
     font-size: 20px;
 }
 
@@ -60,13 +90,18 @@ body {
     left: 27px;
     right: 1px;
     top: 20px;
+
 }
+
 
 .textoeimagem{
     display: flex;
     margin-top: 60px;
+
+
     margin-left: 100px;
     height: 75vh;
+
 
 }
 .textoh1{
@@ -87,9 +122,8 @@ color: #2C2C2C;
 
 text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     z-index: 2;
-}
-.textoh1:hover{
-    transform: scale(1.1);
+
+
 }
 
 .textoparagrafo{
@@ -108,35 +142,35 @@ line-height: 34px;
 transition: transform .5s;
 color: #2C2C2C;
 
-}
-.textoparagrafo:hover{
-    transform: scale(1.1);
+
 }
 
-.frente{
+.frente {
     position: absolute;
-width: 601px;
-height: 549px;
-left: 950px;
-top: 156px;
-z-index: 1;
-transition: transform .5s;
 
-border-radius: 253px;
+    width: 30vw;
+    height: auto;
+    left: calc(40% + 250px);
+    top: 20%;
+    z-index: 1;
+
+    border-radius: 253px;
 }
+
+
 .frente:hover{
     transform: scale(1.1);
 }
 
-.fundo{
-position: absolute;
-width: 710.29px;
-height: 645.1px;
-left: 950px;
-top: 120px;
+
+.fundo {
+    position: absolute;
+    width: 30vw;
+    height: auto;
+    left: calc(40% + 250px);
+    top: 20%;
 
 }
-
 .lado{
 position: absolute;
 width: 220px;
@@ -150,7 +184,11 @@ top: 143px;
 width: 100%;
 height: 0px;
 left: -4px;
-top: 820px;
+
+top: 740px;
+
+
+
 
 border: 1px solid #2C2C2C;
 }
@@ -159,10 +197,15 @@ border: 1px solid #2C2C2C;
 }
 
 
+.pardeallan{
+    height: 90vh;
+}
+
+
 .frase-grande {
-    color: #1122BB;
+    color: #2C2C2C;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 32px;
     line-height: 54px;
     text-align: center;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -170,7 +213,7 @@ border: 1px solid #2C2C2C;
 .frases {
     display: flex;
     justify-content:center;
-    /*Não está responsivo quando diminuímos a tela*/
+  
 }
 .frases p {
     font-weight: 400;
@@ -210,3 +253,130 @@ border: 1px solid #2C2C2C;
     border: 5px solid #1466CF;
 }
 
+
+
+/* CSS para tablets */
+
+@media only screen and  (max-width: 768px) {
+
+
+  .lado {
+    width: 30%;
+  }
+
+  .frente {
+    position: absolute;
+    width:40%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 55%;
+    z-index: 1;
+
+    border-radius: 253px;
+    transition: none;
+}
+
+.fundo {
+    position: absolute;
+    width: 40%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top:55%;
+}
+
+  .cabecalho {
+    font-size: 24px;
+  }
+
+
+  .lista a {
+    font-size: 16px;
+  }
+
+
+  .textoh1 {
+    font-size: 32px;
+   
+    position: absolute;
+    width: 50%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15%;
+
+  }
+
+
+ 
+  .textoparagrafo {
+  
+    font-size: 16px;
+
+
+    position: absolute;
+    width: 60%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40%;
+
+  }
+
+    .pardeallan .frases {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+
+} 
+@media only screen and  (max-width: 480px) {
+    .frente {
+       
+    }
+    .fundo{
+       
+    }
+
+    .cabecalho {
+        font-size: 16px;
+      }
+    
+    
+      .lista a {
+        font-size: 8px;
+      }
+    
+    
+      .textoh1 {
+        font-size: 24px;
+      
+        position: absolute;
+        width: 60%;
+        height: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 15%;
+    
+      }
+
+     
+      .textoparagrafo {
+      
+        font-size: 12px;
+ 
+    
+        position: absolute;
+        width: 60%;
+        height: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 40%;
+    
+      }
+    .frase-grande{
+        font-size: 24px;
+    }
+}
