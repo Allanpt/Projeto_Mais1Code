@@ -1,20 +1,127 @@
 @font-face {
     font-family: 'Open Sans';
-    src: url('fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
+    src: url('fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
 }
-ul {
+* {
+    box-sizing: border-box;
     list-style: none;
+    text-decoration: none;
 }
 body {
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    background-color:#E5E5E5 ;
+    background-color: #E5E5E5;
+}
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+.lista-container {
+    display: flex;
+}
+.lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    gap: 30px;
+}
+.lista a {
+    color: #1466cf;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+.lista a:hover {
+    text-decoration: underline;
+}
+.logo {
+    height: 50px;
+}
+.textoeimagem{
+    display: flex;
+    margin-top: 60px;
+    height: 75vh;
+}
+.textoh1{
+    position: absolute;
+    width: 545px;
+    height: 207px;
+    left: 35px;
+    top: 191px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 54px;
+    transition: transform .5s;
+    color: #2C2C2C;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+.textoparagrafo{
+    position: absolute;
+    width: 545px;
+    height: 207px;
+    left: 36px;
+    top: 350px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 34px;
+    transition: transform .5s;
+    color: #2C2C2C;
+}
+.frente {
+    position: absolute;
+    width: 30vw;
+    height: auto;
+    left: calc(40% + 250px);
+    top: 20%;
+    z-index: 1;
+    border-radius: 253px;
+}
+.fundo {
+    position: absolute;
+    width: 30vw;
+    height: auto;
+    left: calc(40% + 250px);
+    top: 20%;
+}
+.lado{
+    position: absolute;
+    width: 220px;
+    height: 251px;
+    left: -118px;
+    top: 143px;
+}
+.linha{
+    position: absolute;
+    width: 100%;
+    height: 0px;
+    left: -4px;
+    top: 740px;
+    border: 1px solid #2C2C2C;
+}
+.pardeallan{
+    height: 90vh;
 }
 .frase-grande {
-    color: #1122BB;
+    color: #2C2C2C;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 32px;
     line-height: 54px;
     text-align: center;
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -22,7 +129,6 @@ body {
 .frases {
     display: flex;
     justify-content:center;
-    /*Não está responsivo quando diminuímos a tela*/
 }
 .frases p {
     font-weight: 400;
@@ -60,4 +166,93 @@ body {
 }
 .bloco5 {
     border: 5px solid #1466CF;
+}
+/* CSS para tablets */
+@media only screen and  (max-width: 768px) {
+.lado {
+    width: 30%;
+}
+.frente {
+    position: absolute;
+    width:40%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 55%;
+    z-index: 1;
+    border-radius: 253px;
+    transition: none;
+}
+.fundo {
+    position: absolute;
+    width: 40%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top:55%;
+}
+.cabecalho {
+    font-size: 24px;
+}
+.lista a {
+    font-size: 16px;
+}
+.textoh1 {
+    font-size: 32px;
+    position: absolute;
+    width: 50%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15%;
+}
+.textoparagrafo {
+    font-size: 16px;
+    position: absolute;
+    width: 60%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40%;
+}
+.pardeallan .frases {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+} 
+@media only screen and  (max-width: 480px) {
+.frente {
+       
+}
+.fundo{
+       
+}
+.cabecalho {
+    font-size: 16px;
+}
+.lista a {
+    font-size: 8px;
+}
+.textoh1 {
+    font-size: 24px;
+    position: absolute;
+    width: 60%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15%;
+}
+.textoparagrafo {
+    font-size: 12px;
+    position: absolute;
+    width: 60%;
+    height: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40%;
+}
+.frase-grande{
+    font-size: 24px;
+}
 }
